@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform your astrology passion into a profitable side hustle with 80 AI prompts designed for astrology entrepreneurs.">
+    <title>The Astrology Side Hustle AI Toolkit - Turn Your Passion Into Profit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8B5CF6;
+            --primary-dark: #7C3AED;
+            --secondary: #EC4899;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --text: #374151;
+            --text-light: #6B7280;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .subheadline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .hero .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: var(--light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* What's Inside Section */
+        .whats-inside {
+            background: white;
+        }
+
+        .prompts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .prompt-category {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .prompt-category h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .prompt-count {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .prompt-category ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .prompt-category li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text);
+        }
+
+        .prompt-category li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Social Proof Section */
+        .social-proof {
+            background: var(--light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            color: var(--dark);
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: white;
+            text-align: center;
+        }
+
+        .pricing-card {
+            max-width: 500px;
+            margin: 50px auto;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .price {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+
+        .price-description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .buy-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .guarantee {
+            margin-top: 30px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .value-items {
+            text-align: left;
+            margin: 30px 0;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .value-items li {
+            padding: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: var(--light);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 25px;
+            font-weight: 700;
+            color: var(--dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--light);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 300;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 25px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 25px 25px 25px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subheadline {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .benefits-grid,
+            .prompts-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price {
+                font-size: 3rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content fade-in-up">
+            <h1>Turn Your Astrology Passion Into Profit With AI</h1>
+            <p class="subheadline">80 Ready-to-Use AI Prompts for Creating Astrology Products, Content & Marketing That Actually Sells</p>
+            <a href="#pricing" class="cta-button">Get Instant Access - $47</a>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Astrology Entrepreneurs Love This Toolkit</h2>
+            <p class="section-subtitle">Stop staring at blank screens. Start creating profitable astrology content in minutes, not hours.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Launch Your Side Hustle Fast</h3>
+                    <p>No technical skills needed. Just copy, paste, and customize these proven prompts to create your first astrology product this week.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Multiple Income Streams</h3>
+                    <p>Create birth chart reports, compatibility guides, astrology courses, and more. One toolkit, endless monetization possibilities.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Battle-Tested Prompts</h3>
+                    <p>Each prompt is carefully crafted to generate high-quality, unique astrology content that your audience will pay for.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside Section -->
+    <section class="whats-inside">
+        <div class="container">
+            <h2 class="section-title">What's Inside the Toolkit</h2>
+            <p class="section-subtitle">80 professionally crafted AI prompts organized into three powerful categories</p>
+            
+            <div class="prompts-grid">
+                <div class="prompt-category">
+                    <h3>🎨 Product Creation</h3>
+                    <span class="prompt-count">35 Prompts</span>
+                    <ul>
+                        <li>Birth chart interpretation reports</li>
+                        <li>Compatibility analysis guides</li>
+                        <li>Digital astrology courses</li>
+                        <li>Monthly horoscope subscriptions</li>
+                        <li>Astrology eBooks & workbooks</li>
+                        <li>And 30 more product ideas...</li>
+                    </ul>
+                </div>
+                
+                <div class="prompt-category">
+                    <h3>📝 Content Creation</h3>
+                    <span class="prompt-count">25 Prompts</span>
+                    <ul>
+                        <li>Viral social media posts</li>
+                        <li>Blog articles that rank</li>
+                        <li>Email sequences that convert</li>
+                        <li>YouTube video scripts</li>
+                        <li>Instagram carousel content</li>
+                        <li>And 20 more content formats...</li>
+                    </ul>
+                </div>
+                
+                <div class="prompt-category">
+                    <h3>📈 Marketing & Growth</h3>
+                    <span class="prompt-count">20 Prompts</span>
+                    <ul>
+                        <li>Landing page copy that converts</li>
+                        <li>Sales funnel sequences</li>
+                        <li>Lead magnet creation</li>
+                        <li>Ad copy for Facebook & Instagram</li>
+                        <li>Customer testimonial requests</li>
+                        <li>And 15 more marketing tools...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="section-title">Join Hundreds of Successful Astrology Entrepreneurs</h2>
+            <p class="section-subtitle">See what others are saying about the Astrology Side Hustle AI Toolkit</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"I created my first digital astrology product in just 3 days using these prompts. Made my first sale within a week. This toolkit paid for itself 10x over!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah Martinez</h4>
+                            <p>Astrology Coach</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"As someone who's been doing astrology for years but struggled with the business side, this was a game-changer. The marketing prompts alone are worth 10x the price."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JL</div>
+                        <div class="author-info">
+                            <h4>Jessica Liu</h4>
+                            <p>Professional Astrologer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"I went from zero income from astrology to making $2,000/month in just 60 days. These prompts gave me the confidence and tools to finally monetize my passion."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <h4>Michael Kumar</h4>
+                            <p>Astrology Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Get Instant Access Today</h2>
+            <p class="section-subtitle">One-time payment. Lifetime access. No subscriptions.</p>
+            
+            <div class="pricing-card">
+                <h3>The Complete Astrology Side Hustle AI Toolkit</h3>
+                <div class="price">$47</div>
+                <p class="price-description">One-time payment • Instant digital delivery</p>
+                
+                <ul class="value-items">
+                    <li>✓ 80 Professional AI Prompts</li>
+                    <li>✓ Product Creation Templates</li>
+                    <li>✓ Content Marketing Prompts</li>
+                    <li>✓ Sales & Marketing Copy</li>
+                    <li>✓ Lifetime Access & Updates</li>
+                    <li>✓ Instant PDF Download</li>
+                </ul>
+                
+                <!-- Polar.sh Integration Point -->
+                <button class="buy-button" onclick="handlePurchase()">Get Instant Access Now</button>
+                
+                <p class="guarantee">🔒 30-Day Money-Back Guarantee<br>If you're not satisfied, we'll refund every penny.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What exactly do I get?
+                    </div>
+                    <div class="faq-answer">
+                        You'll receive instant access to a professionally designed PDF containing 80 ready-to-use AI prompts specifically crafted for astrology entrepreneurs. These are organized into three categories: Product Creation (35 prompts), Content Creation (25 prompts), and Marketing & Growth (20 prompts).
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need technical skills or AI experience?
+                    </div>
+                    <div class="faq-answer">
+                        Not at all! These prompts are designed to be copy-paste simple. If you can use ChatGPT or Claude, you can use these prompts. Each one includes clear instructions and examples.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Which AI tools do these prompts work with?
+                    </div>
+                    <div class="faq-answer">
+                        These prompts are compatible with ChatGPT (3.5 and 4), Claude, and other major AI language models. They're designed to be flexible and work across platforms.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How quickly can I start making money?
+                    </div>
+                    <div class="faq-answer">
+                        Many users create their first digital product within days. The prompts handle the heavy lifting of content creation, so you can focus on selling. Your timeline depends on your hustle, but the tools are ready to use immediately.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is this a one-time payment or subscription?
+                    </div>
+                    <div class="faq-answer">
+                        This is a one-time payment of $47. You get lifetime access to the toolkit with no recurring fees. Any future updates or additions are included free.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What if I'm not satisfied?
+                    </div>
+                    <div class="faq-answer">
+                        We offer a 30-day money-back guarantee. If you're not completely satisfied with the toolkit, just email us within 30 days for a full refund. No questions asked.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I use these prompts for client work?
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! You can use these prompts to create products and content for yourself or your clients. The content you generate is yours to use commercially without restrictions.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Astrology Side Hustle AI Toolkit. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Contact: support@astrologytoolkit.com</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const wasActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle current item if it wasn't active
+                if (!wasActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Polar.sh Integration Function
+        function handlePurchase() {
+            // Replace with your actual Polar.sh product URL/integration
+            // Example: window.location.href = 'https://polar.sh/your-product-url';
+            
+            // For now, this is a placeholder
+            alert('Polar.sh integration coming soon! Replace this with your Polar.sh checkout URL.');
+            
+            // Actual implementation would be:
+            // window.open('YOUR_POLAR_SH_CHECKOUT_URL', '_blank');
+        }
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.benefit-card, .prompt-category, .testimonial, .pricing-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
