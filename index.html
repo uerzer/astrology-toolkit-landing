@@ -29,7 +29,6 @@
             background: #fff;
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -90,14 +89,12 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.3);
         }
 
-        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Section Styling */
         section {
             padding: 80px 20px;
         }
@@ -120,7 +117,6 @@
             margin-right: auto;
         }
 
-        /* Benefits Section */
         .benefits {
             background: var(--light);
         }
@@ -162,7 +158,6 @@
             line-height: 1.7;
         }
 
-        /* What's Inside Section */
         .whats-inside {
             background: white;
         }
@@ -220,7 +215,6 @@
             font-size: 1.2rem;
         }
 
-        /* Social Proof Section */
         .social-proof {
             background: var(--light);
         }
@@ -289,7 +283,6 @@
             font-size: 0.9rem;
         }
 
-        /* Pricing Section */
         .pricing {
             background: white;
             text-align: center;
@@ -356,7 +349,6 @@
             font-size: 1.1rem;
         }
 
-        /* FAQ Section */
         .faq {
             background: var(--light);
         }
@@ -416,7 +408,6 @@
             padding: 0 25px 25px 25px;
         }
 
-        /* Footer */
         footer {
             background: var(--dark);
             color: white;
@@ -428,7 +419,6 @@
             opacity: 0.8;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -453,7 +443,6 @@
             }
         }
 
-        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -471,7 +460,6 @@
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content fade-in-up">
             <h1>Turn Your Astrology Passion Into Profit With AI</h1>
@@ -480,7 +468,6 @@
         </div>
     </section>
 
-    <!-- Benefits Section -->
     <section class="benefits">
         <div class="container">
             <h2 class="section-title">Why Astrology Entrepreneurs Love This Toolkit</h2>
@@ -508,7 +495,6 @@
         </div>
     </section>
 
-    <!-- What's Inside Section -->
     <section class="whats-inside">
         <div class="container">
             <h2 class="section-title">What's Inside the Toolkit</h2>
@@ -557,7 +543,6 @@
         </div>
     </section>
 
-    <!-- Social Proof Section -->
     <section class="social-proof">
         <div class="container">
             <h2 class="section-title">Join Hundreds of Successful Astrology Entrepreneurs</h2>
@@ -600,7 +585,6 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
     <section id="pricing" class="pricing">
         <div class="container">
             <h2 class="section-title">Get Instant Access Today</h2>
@@ -620,7 +604,6 @@
                     <li>✓ Instant PDF Download</li>
                 </ul>
                 
-                <!-- Polar.sh Integration Point -->
                 <button class="buy-button" onclick="handlePurchase()">Get Instant Access Now</button>
                 
                 <p class="guarantee">🔒 30-Day Money-Back Guarantee<br>If you're not satisfied, we'll refund every penny.</p>
@@ -628,7 +611,6 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section class="faq">
         <div class="container">
             <h2 class="section-title">Frequently Asked Questions</h2>
@@ -700,7 +682,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Astrology Side Hustle AI Toolkit. All rights reserved.</p>
@@ -709,25 +690,21 @@
     </footer>
 
     <script>
-        // FAQ Toggle Functionality
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const faqItem = question.parentElement;
                 const wasActive = faqItem.classList.contains('active');
                 
-                // Close all FAQ items
                 document.querySelectorAll('.faq-item').forEach(item => {
                     item.classList.remove('active');
                 });
                 
-                // Toggle current item if it wasn't active
                 if (!wasActive) {
                     faqItem.classList.add('active');
                 }
             });
         });
 
-        // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -741,19 +718,10 @@
             });
         });
 
-        // Polar.sh Integration Function
         function handlePurchase() {
-            // Replace with your actual Polar.sh product URL/integration
-            // Example: window.location.href = 'https://polar.sh/your-product-url';
-            
-            // For now, this is a placeholder
             alert('Polar.sh integration coming soon! Replace this with your Polar.sh checkout URL.');
-            
-            // Actual implementation would be:
-            // window.open('YOUR_POLAR_SH_CHECKOUT_URL', '_blank');
         }
 
-        // Add scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -768,7 +736,6 @@
             });
         }, observerOptions);
 
-        // Observe elements for animation
         document.querySelectorAll('.benefit-card, .prompt-category, .testimonial, .pricing-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
